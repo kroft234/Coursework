@@ -1,0 +1,19 @@
+{% extends 'main/layout.html'%}
+
+{% block title %} Форма по редактированию {% endblock %}
+
+{% block content %}
+    <div class ="feature">
+        <h1>Форма по редактированию</h1>
+       <form method="post">
+           {% csrf_token%}<br>
+           {{form.title}}<br>
+           {{form.anons}}<br>
+           {{form.full_text}}<br>
+           {{form.date}}<br>
+           <span>{{ error }}</span>
+           <button class ="btn btn-success" type="sumbit"> Добавить изменения </button>
+
+       </form>
+    </div>
+{% endblock %}

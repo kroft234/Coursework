@@ -1,0 +1,14 @@
+{% extends 'main/layout.html'%}
+
+{% block title %} Удаление статьи {% endblock %}
+
+{% block content %}
+    <div class ="feature">
+        <h2>Вы уверены, что хотите удалить статью ?</h2>
+       <form method="post">
+           {% csrf_token%}
+                <button class ="btn btn-danger" type="sumbit"> Да, я уверен </button>
+                <a href="{% url 'news_home' %}" class ="btn btn-danger" > Нет, отменить и вернуться к выбору </a>
+       </form>
+    </div>
+{% endblock %}
